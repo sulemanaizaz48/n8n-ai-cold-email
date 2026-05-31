@@ -1,0 +1,21 @@
+const rawText = $json.content.parts[0].text;
+
+// Convert escaped newlines
+const cleaned = rawText.replace(/\\n/g, '\n');
+
+// Extract subject
+const subjectMatch = cleaned.match(/Subject:\s*(.*)/i);
+
+const subject = subjectMatch
+  ? subjectMatch[1].trim()
+  : "No Subject";
+
+// Remove subject line from body
+const body = cleaned
+  .replace(/Subject:\s*.*/i, '')
+  .trim();
+
+return {
+  subject,
+  body
+};
