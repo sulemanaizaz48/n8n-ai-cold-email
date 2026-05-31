@@ -1,2 +1,21 @@
-# n8n-ai-cold-email
-AI-powered cold email automation using n8n. Web form captures lead data, Gemini generates personalized copy, Code node cleans the output, Gmail sends it.
+# AI Cold Email Writer
+
+Web form → Gemini writes email → Code node cleans output → Gmail sends it.
+
+## What It Does
+
+- Webhook captures lead data from frontend form
+- Gemini generates personalized cold email using structured prompt
+- Code node strips filler text and markdown from raw AI output
+- Gmail sends clean, professional email automatically
+
+## Tech Stack
+
+- n8n
+- Google Gemini
+- Code node (JavaScript)
+- Gmail (OAuth)
+- Webhook
+
+
+
